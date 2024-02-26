@@ -10,6 +10,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ayazmo/core": "^0.1.11",
+    "@ayazmo/types": "^0.1.11",
+    "@ayazmo/utils": "^0.1.11",
     "@fastify/cookie": "^9.3.1",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-avatar": "^1.0.4",
