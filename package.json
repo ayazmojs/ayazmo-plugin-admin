@@ -1,6 +1,6 @@
 {
   "name": "ayazmo-plugin-admin",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Admin plugin for ayazmo applications using Next.js",
   "repository": "git@github.com:ayazmojs/ayazmo-plugin-admin.git",
   "author": "Tsvetan Nikolov",
@@ -9,7 +9,16 @@
   "license": "MIT",
   "keywords": [
     "ayazmo-plugin-admin",
-    "ayazmo"
+    "ayazmo",
+    "app",
+    "server",
+    "public",
+    "components",
+    "types",
+    "middleware.ts",
+    "next.config.mjs",
+    "postcss.config.cjs",
+    "tailwind.config.js"
   ],
   "scripts": {
     "dev": "next dev -p 4000",
