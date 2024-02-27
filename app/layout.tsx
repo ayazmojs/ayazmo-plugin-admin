@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Providers from "@/components/layout/providers";
+import Providers from "ayazmo-plugin-admin/components/layout/providers";
 import { getServerSession } from "next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
