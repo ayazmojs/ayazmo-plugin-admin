@@ -9,16 +9,7 @@
   "license": "MIT",
   "keywords": [
     "ayazmo-plugin-admin",
-    "ayazmo",
-    "app",
-    "server",
-    "public",
-    "components",
-    "types",
-    "middleware.ts",
-    "next.config.mjs",
-    "postcss.config.cjs",
-    "tailwind.config.js"
+    "ayazmo"
   ],
   "scripts": {
     "dev": "next dev -p 4000",
@@ -28,7 +19,16 @@
   },
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "app",
+    "server",
+    "public",
+    "components",
+    "types",
+    "middleware.ts",
+    "next.config.mjs",
+    "postcss.config.cjs",
+    "tailwind.config.js"
   ],
   "dependencies": {
     "@ayazmo/core": "^0.1.11",
