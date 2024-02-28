@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Icons } from "@/components/icons";
-import { cn } from "@/lib/utils";
-import { NavItem } from "@/types";
+import { Icons } from "ayazmo-plugin-admin/components/icons";
+import { cn } from "ayazmo-plugin-admin/lib/utils";
+import { NavItem } from "ayazmo-plugin-admin/types";
 import { Dispatch, SetStateAction } from "react";
-import navigation from '@/lib/navigation';
+import navigation from 'ayazmo-plugin-admin/lib/navigation';
 
 interface DashboardNavProps {
   setOpen?: Dispatch<SetStateAction<boolean>>;

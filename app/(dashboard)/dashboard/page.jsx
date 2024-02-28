@@ -1,5 +1,5 @@
 'use client'
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "ayazmo-plugin-admin/components/ui/scroll-area";
 
 export default function page() {
   return (

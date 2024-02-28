@@ -1,6 +1,6 @@
 "use client";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "ayazmo-plugin-admin/components/ui/avatar";
+import { Button } from "ayazmo-plugin-admin/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "ayazmo-plugin-admin/components/ui/dropdown-menu";
 import { signOut, useSession } from "next-auth/react";
 export function UserNav() {
   const { data: session } = useSession();

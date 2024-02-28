@@ -6,6 +6,13 @@ import { AyazmoError, mergeFolders, getRegisteredPlugins } from '@ayazmo/utils';
 import { getPluginRoot, loadRoutes, FastifyInstance, FastifyRequest, cors } from "@ayazmo/core";
 import { PluginConfig } from '@ayazmo/types'
 import { decode, JWT, Secret } from 'next-auth/jwt';
+import { z } from 'zod'
+
+// validate env variables
+const envSchema = z.object({
+  secret: z.string({ required_error: "The NEXTAUTH_SECRET environment variable is not set." }),
+  nextauth_url: z.string({ required_error: "The NEXTAUTH_URL environment variable is not set." }).url({ message: "The NEXTAUTH_URL environment variable is not a valid url." }),
+});
 
 interface ExtendedAdmin extends JWT {
   [key: string]: any;
@@ -28,6 +35,24 @@ declare module "@ayazmo/types" {
 }
 
 export default async (app: FastifyInstance, container: any, pluginConfig: PluginConfig) => {
+
+  try {
+    envSchema.parse({
+      secret: process.env.NEXTAUTH_SECRET,
+      nextauth_url: process.env.NEXTAUTH_URL
+    })
+  } catch (error: any) {
+    if (error instanceof z.ZodError) {
+      // Custom error handling to display more user-friendly messages
+      error.issues.length && error.issues.map(issue => {
+        app.log.error(issue.message)
+      });
+    } else {
+      app.log.error("An unexpected error occurred:", error);
+    }
+
+    process.exit(1)
+  }
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);

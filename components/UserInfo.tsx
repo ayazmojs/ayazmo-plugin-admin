@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
-import { User } from "@/types/user";
+import { User } from "ayazmo-plugin-admin/types/user";
 import { signOut } from "next-auth/react";
-import { get } from '@/lib/http-wrapper';
+import { get } from 'ayazmo-plugin-admin/lib/http-wrapper';
 
 type UserInfoProps = {
   user: User;

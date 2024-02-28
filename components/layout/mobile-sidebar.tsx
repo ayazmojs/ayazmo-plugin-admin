@@ -1,6 +1,6 @@
 "use client";
-import { DashboardNav } from "@/components/dashboard-nav";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DashboardNav } from "ayazmo-plugin-admin/components/dashboard-nav";
+import { Sheet, SheetContent, SheetTrigger } from "ayazmo-plugin-admin/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 

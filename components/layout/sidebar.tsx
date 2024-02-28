@@ -1,5 +1,5 @@
-import { DashboardNav } from "@/components/dashboard-nav";
-import { cn } from "@/lib/utils";
+import { DashboardNav } from "ayazmo-plugin-admin/components/dashboard-nav";
+import { cn } from "ayazmo-plugin-admin/lib/utils";
 
 export default function Sidebar() {
   return (

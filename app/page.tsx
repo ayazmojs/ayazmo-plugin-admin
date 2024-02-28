@@ -1,6 +1,6 @@
 import React from 'react';
-import UserInfo from "@/components/UserInfo";
-import { getServerAuthSession } from "@/server/auth";
+import UserInfo from "ayazmo-plugin-admin/components/UserInfo";
+import { getServerAuthSession } from "ayazmo-plugin-admin/server/auth";
 import Link from "next/link";
 
 export default async function HomePage() {
