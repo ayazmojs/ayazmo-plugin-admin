@@ -39,7 +39,7 @@ next-env.d.ts
 lib/navigation.json
 dist/
 /.turbo
-# app/*
+app/*
 !app/(dashboard)/dashboard/admin
 !app/(dashboard)/dashboard/layout.tsx
 !app/(dashboard)/dashboard/page.tsx
