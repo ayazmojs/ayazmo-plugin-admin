@@ -42,4 +42,30 @@ export default class AdminService extends BasePluginService {
       return false;
     }
   }
+
+  async findAllAdminUsers() {
+    return this.em.find(Admin, {})
+  }
+
+  async count() {
+    return this.em.count(Admin, {})
+  }
+
+  async create(email: string, plainPassword: string, first_name: string, last_name: string) {
+    console.log({ plainPassword })
+    const hashedPassword = await argon2.hash(plainPassword);
+
+    const admin = this.em.create(Admin, {
+      email,
+      password_hash: hashedPassword,
+      first_name,
+      last_name,
+      email_verified: true,
+      status: 'active'
+    })
+
+    await this.em.flush()
+
+    return admin
+  }
 }

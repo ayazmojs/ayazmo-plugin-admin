@@ -44,7 +44,7 @@ const fetchWrapper = (method: string) => async (url: string, options: FetchOptio
     (config.headers as Record<string, string>)['Cookie'] = cookiesArray.join('; ');
   }
 
-  if (options.body && typeof options.body === 'object' && !(options.body instanceof FormData) && method !== 'GET') {
+  if (options.body != null && typeof options.body === 'object' && !(options.body instanceof FormData) && method !== 'GET') {
     config.body = JSON.stringify(options.body);
   }
 

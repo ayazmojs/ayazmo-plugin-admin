@@ -1,6 +1,6 @@
 {
   "name": "ayazmo-plugin-admin",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Admin plugin for ayazmo applications using Next.js",
   "repository": "git@github.com:ayazmojs/ayazmo-plugin-admin.git",
   "author": "Tsvetan Nikolov",
@@ -32,6 +32,9 @@
     "tsconfig.json",
     "next-env.d.ts"
   ],
+  "bin": {
+    "ayazmo-plugin-admin": "./dist/cli.js"
+  },
   "dependencies": {
     "@ayazmo/core": "^0.1.11",
     "@ayazmo/types": "^0.1.11",

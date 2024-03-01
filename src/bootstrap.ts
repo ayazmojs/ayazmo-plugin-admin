@@ -103,7 +103,10 @@ export default async (app: FastifyInstance, container: any, pluginConfig: Plugin
 
   app.addHook('preHandler', async (request: FastifyRequest) => {
     const requestPath = request.routeOptions.url ?? ''
-    const isProtectedRoute = requestPath.startsWith('/admin') && !requestPath.startsWith('/admin/login');
+    const isProtectedRoute = requestPath.startsWith('/admin') 
+      && !requestPath.startsWith('/admin/login') 
+      && !requestPath.startsWith('/admin/setup')
+      && !requestPath.startsWith('/admin/register')
 
     if (isProtectedRoute) {
       try {
