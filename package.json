@@ -1,6 +1,6 @@
 {
   "name": "ayazmo-plugin-admin",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Admin plugin for ayazmo applications using Next.js",
   "repository": "git@github.com:ayazmojs/ayazmo-plugin-admin.git",
   "author": "Tsvetan Nikolov",

@@ -2,13 +2,13 @@
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "ayazmo-plugin-admin/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "ayazmo-plugin-admin/components/ui/dropdown-menu";
 type CompProps = {};
 export default function ThemeToggle({ }: CompProps) {
   const { setTheme } = useTheme();
