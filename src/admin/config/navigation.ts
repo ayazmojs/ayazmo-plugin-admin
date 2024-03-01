@@ -1,4 +1,4 @@
-[
+const menu = [
   {
     "title": "Dashboard",
     "href": "/dashboard",
@@ -12,3 +12,5 @@
     "label": "Admins"
   }
 ]
+
+export default menu

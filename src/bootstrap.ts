@@ -140,18 +140,16 @@ export default async (app: FastifyInstance, container: any, pluginConfig: Plugin
 
   for (const plugin of plugins) {
 
-    const pluginAdminRoot = path.join(getPluginRoot(plugin.name, plugin.settings), 'src', 'admin')
-    const pluginAdminRootNavigation = path.join(pluginAdminRoot, 'config', 'navigation.json')
+    const pluginAdminRoot = path.join(getPluginRoot(plugin.name, plugin.settings), 'dist', 'admin')
+    const pluginAdminRootNavigation = path.join(pluginAdminRoot, 'config', 'navigation.js')
 
     // import admin navigation
     if (fs.existsSync(pluginAdminRootNavigation)) {
-      const items = await import(pluginAdminRootNavigation, {
-        assert: { type: 'json' }
-      })
+      const items = await import(pluginAdminRootNavigation)
       navigation = [...items.default, ...navigation]
     }
 
-    // if plugin is admin -> skip
+    // if plugin is admin
     if (plugin.name === pluginConfig.name) {
       continue;
     }
