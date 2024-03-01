@@ -7,7 +7,7 @@ import { Icons } from "ayazmo-plugin-admin/components/icons";
 import { cn } from "ayazmo-plugin-admin/lib/utils";
 import { NavItem } from "ayazmo-plugin-admin/types";
 import { Dispatch, SetStateAction } from "react";
-import navigation from 'ayazmo-plugin-admin/lib/navigation';
+import navigation from 'ayazmo-plugin-admin/lib/navigation.json';
 
 interface DashboardNavProps {
   setOpen?: Dispatch<SetStateAction<boolean>>;

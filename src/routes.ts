@@ -155,6 +155,16 @@ const routes = (app: FastifyInstance): AyazmoRouteOptions[] => [
 
       reply.code(200).send({ allowed: true })
     }
+  },
+  {
+    method: 'GET',
+    url: '/admin/admins',
+    handler: async (request, reply) => {
+      const adminService = request.diScope.resolve('adminService')
+      const admins = await adminService.findAllAdminUsers()
+
+      return admins
+    }
   }
 ]
 

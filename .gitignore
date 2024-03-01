@@ -39,19 +39,22 @@ next-env.d.ts
 lib/navigation.json
 dist/
 /.turbo
-app/*
+# app/*
+!app/(dashboard)/dashboard/admin
 !app/(dashboard)/dashboard/layout.tsx
 !app/(dashboard)/dashboard/page.tsx
 !app/(dashboard)/dashboard/login/page.tsx
 !app/(dashboard)/dashboard/favicon.ico
 !app/(dashboard)/dashboard/globall.css
 !app/(dashboard)/dashboard/not-found.tsx
+!app/setup
 
 components/*
 !components/layout
 !components/modal
 !components/table
 !components/ui
+!components/admin
 !components/breadcrumbs.tsx
 !components/dashboard-nav.tsx
 !components/icons.tsx

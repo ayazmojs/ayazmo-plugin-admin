@@ -103,8 +103,8 @@ export default async (app: FastifyInstance, container: any, pluginConfig: Plugin
 
   app.addHook('preHandler', async (request: FastifyRequest) => {
     const requestPath = request.routeOptions.url ?? ''
-    const isProtectedRoute = requestPath.startsWith('/admin') 
-      && !requestPath.startsWith('/admin/login') 
+    const isProtectedRoute = requestPath.startsWith('/admin')
+      && !requestPath.startsWith('/admin/login')
       && !requestPath.startsWith('/admin/setup')
       && !requestPath.startsWith('/admin/register')
 
@@ -148,7 +148,7 @@ export default async (app: FastifyInstance, container: any, pluginConfig: Plugin
       const items = await import(pluginAdminRootNavigation, {
         assert: { type: 'json' }
       })
-      navigation = [...navigation, ...items.default]
+      navigation = [...items.default, ...navigation]
     }
 
     // if plugin is admin -> skip
@@ -178,7 +178,7 @@ export default async (app: FastifyInstance, container: any, pluginConfig: Plugin
     ])
   }
 
-  fs.writeFileSync(path.join(adminPluginPath, 'lib', 'navigation.json'), `${JSON.stringify(navigation, null, 2)};`, 'utf-8')
+  fs.writeFileSync(path.join(adminPluginPath, 'lib', 'navigation.json'), `${JSON.stringify(navigation, null, 2)}`, 'utf-8')
 
   const nextAppDir = path.join(__dirname, '..');
 
